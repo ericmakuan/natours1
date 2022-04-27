@@ -10,6 +10,7 @@ const mongoSanitize = require('express-mongo-sanitize');
 const xss = require('xss-clean');
 const hpp = require('hpp');
 const cookieParser = require('cookie-parser');
+const compression = require('compression');
 
 
 
@@ -196,6 +197,8 @@ app.use(xss());
 app.use(hpp({
     whitelist:['duration', 'ratingsAverage', 'ratingsQuantity', 'maxGroupSize','difficulty', 'price']//白名單
 }));
+
+app.use(compression())
 
 
 // app.use(express.static(`${__dirname}/public`));//serve static file

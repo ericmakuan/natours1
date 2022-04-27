@@ -7,7 +7,8 @@ export const login = async (email, password) => { //js方法
     try {
        const res = await axios({  //外接
         method: 'POST',
-        url: 'http://127.0.0.1:3000/api/v1/users/login',
+        url: '/api/v1/users/login', //API跟網站視同個URL可用
+        // url: 'http://127.0.0.1:3000/api/v1/users/login',
         data: {
             email: email, 
             password: password
@@ -30,7 +31,7 @@ export const logout = async () => {
   try{
     const res = await axios({
       method: 'GET',
-      url: 'http://127.0.0.1:3000/api/v1/users/logout',
+      url: '/api/v1/users/logout',
       
     });
 
