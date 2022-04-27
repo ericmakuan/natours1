@@ -7,7 +7,8 @@
     "main": false
   },
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "node server.js",
+    "dev": "nodemon server.js",
     "start:prod": "SET NODE_ENV=production&&nodemon server.js ",
     "debug": "ndb sever.js",
     "build": "parcel build ./public/js/index.js --dist-dir ./public/js/bundled",
@@ -57,5 +58,8 @@
   },
   "optionalDependencies": {
     "win-node-env": "^0.6.1"
+  },
+  "engines": {
+    "node": ">=10.0.0"
   }
 }
