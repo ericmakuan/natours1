@@ -189,8 +189,8 @@ app.use('/api', limiter);//所有API開頭都會有這MIDDLEWARE
 
 
 app.post('/webhook-checkout',
-//  express.raw({ type: "*/*"}),
- express.raw({ type: 'application/json' }),
+ express.raw({ type: "*/*"}),
+//  express.raw({ type: 'application/json' }),
  bookingController.webhookCheckout);//要在app.use(express.json( {limit: '10kb'}));這之前  不能是json
 
 
